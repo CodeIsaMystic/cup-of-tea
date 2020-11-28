@@ -1,0 +1,991 @@
+/******************
+      fonts    
+*******************/
+@font-face {
+  font-family: "amaranth";
+  src: url("../font/amaranth.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+
+/*********************
+________global    
+                *****/
+:root {
+  --bg-color: #f2f2f2;
+  --bg-brownColor: #B09067;
+  --primary-color: #666;
+  --secondary-color: #96B011;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  width: 100%;
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+
+/***************************
+________headAndFoot set-BG    
+                ***********/
+/*********
+?????
+no way to align img
+on bottom & contain 
+on 1100px fon footer
+????
+*********/
+.set-green-bg {
+  position: var(--primary-color);
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  background-position: center center;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/*********************
+________container    
+                *****/
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/***********************
+________clearfix  *****/   
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/*********************
+________flex   
+                *****/
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex--space-between {
+  justify-content: space-between;
+}
+
+.flex--space-evenly {
+  justify-content: space-evenly;
+}
+.flex--col-start {
+  align-items: flex-start;
+}
+
+
+/*********************
+________heading    
+                *****/
+.heading {
+  font-family: "amaranth", sans-serif;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.heading--green {
+  color: var(--secondary-color);
+}
+.heading--left {
+  text-align: left;
+}
+
+
+
+/***********************
+________text-content    
+                *******/
+.text-content {
+  color: var(--primary-color);
+  font-size: 16px;
+  text-align: center;
+}
+
+.text-content--small {
+  font-size: 12px;
+}
+
+.text-content--white {
+  color: #f2f2f2;
+}
+
+.text-content--green {
+  color: var(--secondary-color);
+  font-weight: 100;
+}
+
+.text-content--italic {
+  font-style: italic;
+  font-weight: 100;
+}
+
+.text-content--bold {
+  font-weight: bold;
+}
+
+.text-content--left {
+  text-align: left;
+}
+
+.text-content--right {
+  text-align: right;
+}
+
+
+/***********************
+________buttons    
+                *******/
+.btn {
+  text-transform: uppercase;
+  word-spacing: 3px;
+  letter-spacing: 3px;
+  font-size: 15px;
+  color: #fff;
+  padding: 15px;
+  display: inline-block;
+
+}
+
+.btn--brown {
+  background-color: var(--bg-brownColor);
+  transition: all .4s ease-in-out;
+}
+
+.btn--brown:hover {
+  opacity: .75;
+}
+
+
+
+/*
+create a div for second section to avoid 
+the float issue 
+
+.title-effect {
+position: relative;
+width: 70%;
+margin-left: 30%;
+}
+h2.title-effect::after {
+  /*margin-right: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 70%;
+  right: 0;
+}
+.title-effect span{
+  display: block;
+  background-color: #fff;
+  padding: 5px;
+  z-index: 30;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************
+________site-header    
+                *****/
+.site-header {
+  display: block;
+  position: relative;
+}
+
+.site-header__logo__topRightCorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+}
+
+.site-header__topBanner-discount {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  padding: 10px 0;
+}
+
+.site-header__topBanner-discount h4 {
+  margin: 0;
+  font-weight: 300;
+}
+
+.site-header__main {
+  margin: 25px auto 0;
+}
+
+.site-header__main__logo {
+  margin-left: 30px;
+}
+
+.site-header__main__shopping-cart {
+  margin-right: 30px;
+  padding-top: 17px;
+  color: #fff;
+}
+
+
+.site-header__main__shopping-cart a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.site-header__main__shopping-cart i {
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  padding: 10px;
+  margin: 5px;
+}
+
+.site-header__main__shopping-cart p {
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+/***********************
+________primary-nav    
+                *******/
+.primary-nav {
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+  margin: 25px 0;
+  padding: 15px 30px;
+  transition: all 1s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.415);
+}
+.active {
+  background-color: rgba(255, 255, 255, 0.415);
+}
+
+
+
+/*****************************
+________settings-section  
+                *************/
+.settings-section {
+  padding: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.settings-section--white {
+  background-color: #fff;
+}
+
+.settings-section--marginTop {
+  margin-top: 50px;
+}
+.settings-section--no-marginB {
+  margin-bottom: 0;
+}
+
+.settings-section--gray {
+  background-color: rgba(150, 176, 17, .2);
+  padding: 20px;
+}
+/*************************
+________site-main__slider    
+                *********/
+/*****
+******
+??????
+to check
+on responsive view <1100px
+overflow useless !!!
+????????
+*****
+*****/
+.site-main__slider {
+  overflow: hidden !important;
+  border: none !important;
+}
+
+.site-main__slider a {
+  overflow: hidden !important;
+
+}
+
+/***************************
+________site-main__category    
+          ****************/
+
+/*    hover & title effects    */
+/*   hover on porducts categories  */
+.site-main__category {
+  transition: all .5s ease-in-out;
+}
+
+main .site-main__category:hover .art-category {
+  opacity: .5;
+}
+
+main:hover .art-category:hover {
+  opacity: 1;
+}
+/*   title effect before/after  => to adjust */
+.site-main__category h2 {
+  padding-top: 40px;
+  position: relative;
+}
+.site-main__category h2::before {
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 80%;
+  right: 0;
+}
+.site-main__category h2::after {
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 80%;
+  left: 0;
+}
+
+
+
+/*********************
+________art-category   
+                *****/
+.art-category {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/*********************
+________art-product   
+                *****/
+/*  doublon card-product 
+   listing-product  */
+.art-product {
+  width: 33%;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+.art-product img {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.art-product p:last-of-type {
+  width: 90px;
+  margin: 0 auto 25px;
+}
+
+.art-product p:last-of-type span {
+  text-transform: uppercase;
+}
+
+.art-product p:last-of-type span:last-of-type {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+
+
+/*   title effect before/after   */
+.art-product h2 {
+  position: relative;
+
+}
+.art-product h2::before {
+  content: "";
+  width: 20%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+.art-product h2::after {
+  content: "";
+  width: 20%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 60%;
+  right: 0;
+}
+
+/*********************
+________product-item    
+                *****/
+
+.product-item__header div:last-of-type ul {
+  padding: 0;
+}
+
+.product-item__header div:last-of-type ul li i.star-selected {
+  color: #ffde0e;
+  padding: 0 1px;
+  cursor: pointer;
+}
+
+.product-item__header div:last-of-type p {
+  margin: 0;
+  transition: all .4s ease-in-out;
+}
+
+.product-item__header div:last-of-type p:hover {
+  opacity: .65;
+}
+
+.product-item__body img {
+  width: 400px;
+}
+
+.product-item__body div p:first-of-type {
+  margin: 15px 0 60px;
+}
+
+.product-item__body div p:first-of-type span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.product-item__body div p:last-child {
+  transition: all .4s ease-in-out;
+}
+
+.product-item__body div p:last-child:hover {
+  opacity: .65;
+}
+
+.product-item__body div p a i.heart-icon {
+  color: #e08777;
+}
+/***********************
+________title-category   
+                *******/
+.title-category {
+  width: 100%;
+  padding-top: 50px;
+}
+.title-category img{
+  width: 190px;
+  float: left;
+  margin: 0;
+  padding-top: 15px;
+}
+.title-category p {
+  line-height: 30px;
+}
+
+/***********************
+________card-product   
+                *******/
+/*  doublon art-product 
+listing-product  */
+.card-product {
+width: 33%;
+padding: 5px;
+margin: 0 auto;
+text-align: center;
+}
+.card-product p:last-of-type {
+  width: 90px;
+  margin: 0 auto 25px;
+}
+
+.card-product p:last-of-type span {
+  text-transform: uppercase;
+}
+
+.card-product p:last-of-type span:last-of-type {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+}
+/*            */
+
+
+/***********************
+________about   
+                *******/
+
+.site-main__about h1 {
+  font-family: "amaranth", sans-serif;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.site-main__about p {
+  line-height: 30px;
+}
+
+/***********************
+________art-container  
+                *******/
+.art-founders h2 {
+  margin-top: 20px;
+}
+
+.art-container img{
+  max-width: 550px;
+  margin-top: 20px;
+}
+
+.art-container--A img{
+  float: left;
+  padding: 10px 30px 30px;
+}
+
+.art-container--B img {
+  float: right;
+  padding: 0 30px 30px;
+}
+
+/***********************
+________our-concept  
+                *******/
+.site-main__concept {
+  line-height: 30px;
+}
+/*   
+doublon h1 => about  
+*/
+.site-main__concept h1{
+  font-family: "amaranth", sans-serif;
+  font-weight: 300;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+.our-concept p:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/***********************
+________concept-card  
+                *******/
+/*    doublon 
+art-product/card-product
+listing-product  */
+.concept-card {
+  width: 33%;
+  padding: 5px;
+  margin: 30px auto 10px;
+  text-align: center;
+  }
+
+.concept-card img{
+  width: 100px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************
+________site-footer    
+                *****/
+
+/*  footer-nav   */
+.footer-nav {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.footer-nav a {
+  width: 150px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  margin: 30px auto;
+  transition: all .4s ease-in-out;
+}
+
+.site-footer .footer-nav a i.fa-truck {
+  transform: scaleX(-1);
+}
+
+.footer-nav a i {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+/*  footer-lists  */
+.footer-lists {
+  margin-bottom: 45px;
+}
+
+.list-footer {
+  margin: 45px auto 0;
+  text-align: center;
+}
+
+.list-footer h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.list-footer ul {
+  padding: 0;
+  ;
+}
+
+.list-footer ul li a {
+  font-weight: 100;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all .4s ease-in-out;
+}
+
+.footer-nav a:hover,
+.list-footer ul li a:hover {
+  color: #fff
+}
+
+
+/*  footer  */
+.footer {
+  display: block;
+  padding: 25px;
+  text-align: center;
+  color: #f2f2f2;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.footer__img {
+  width: 50px;
+  padding: 10px 0;
+}
+
+.footer p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.footer p a,
+.footer p span {
+  text-decoration: underline;
+  font-size: 12px;
+  color: #f2f2f2;
+  font-family: Tahoma, Verdana;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************
+________@media    
+                *****/
+@media(max-width: 1200px) {
+  .site-header__logo__topRightCorner {
+    width: 90px;
+  }
+
+  .footer p {
+    width: 95%;
+  }
+}
+
+/*   ON TAB   */
+@media(max-width: 990px) {
+  .flex--space-around--onTab {
+    justify-content: space-around;
+  }
+  .site-header {
+    background-size: cover;
+  }
+  .art-product h2::before {
+    width: 10%;
+  }
+
+  .art-product h2::after {
+    width: 10%;
+  }
+
+  .art-category {
+    width: 50%;
+  }
+
+  .art-category img {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .footer {
+    padding: 25px 0;
+  }
+  .d-block--on-desk {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+}
+
+/*  ON MOBILE   */
+@media(max-width: 768px) {
+  .fixed-on-tab {
+    position: fixed;
+    left: -90px;
+    border: none;
+    box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, .2);
+    border-radius: 50px;
+    z-index: 50;
+    background-color: #96B011;
+    overflow: hidden;
+  }
+  .flex--col-on-tab {
+    flex-direction: column;
+    align-content: center;
+  }
+  .site-header__logo__topRightCorner {
+    display: none;
+  }
+  .site-header__topBanner-discount h4 {
+    margin: 0 20px;
+  }
+  .site-header__main {
+    margin: 15px auto 0;
+  }
+  .site-header__main__logo {
+    margin: 70px auto 0;
+  }
+  .site-header__main__shopping-cart {
+    margin-right: 0;
+    padding-top: 0;
+    padding-right: 15px;
+  }
+  .primary-nav {
+    padding: 25px 0;
+  }
+  .nav-link {
+    margin: 0;
+    padding: 15px 30px;
+    max-width: 310px;
+    width: 100%;
+    text-align: center;
+  }
+  .d-none {
+    display: none;
+  }
+  /*  
+  doublon .art-product
+  .card-product
+  */
+  .art-product {
+    width: 100%;
+  }
+  .art-product h2::before {
+    width: 28%;
+  }
+
+  .art-product h2::after {
+    width: 28%;
+  }
+  
+  .art-product img {
+    width: 70%;
+  }
+  
+  .card-product {
+    width: 100%;
+  }
+  .card-product img {
+    width: 70%;
+  }
+  .d-block {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+.site-main__product-item {
+  width: 100%;
+}
+/*****
+******
+???
+stars align center 
+???
+*****
+*****/
+  .product-item__header div h4,
+  .product-item__header div p,
+  .product-item__header div:last-of-type p {
+    margin-bottom: 30px;
+  }
+
+  .product-item__body div p:last-of-type,
+  .product-item__header div:last-of-type p {
+    margin-top: 10px;
+  }
+  .product-item__body div,
+  .product-item__body div select {
+    width: 80%;
+    margin: 0 auto;
+    
+    
+  }
+
+}
+
+@media(max-width: 375px) {
+  .art-product h2::before {
+    display: none;
+  }
+
+  .art-product h2::after {
+    display: none;
+  }
+
+  /*  
+  doublon .art-product
+  .card-product
+  */
+  .art-product img {
+    width: 100%;
+  }
+  .card-product img {
+    width: 100%;
+  }
+  .site-main__product-item img{
+    width: 100%;
+  }
+  .product-item__body div select  {
+    width: 100%;
+    margin: 0;
+  }
+
+}
